@@ -1,0 +1,1765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project owner="CodeDesigner" version="1.0">
+  <project_properties>
+    <object type="udRootItem">
+      <property name="id" type="long">1</property>
+      <property name="name" type="string">Project items</property>
+      <settings>
+        <object type="udGeneratorCategory">
+          <property name="id" type="long">1</property>
+          <property name="Output directory" type="dirname">/home/txinto/dev/gatATAC/arduino/buzz</property>
+          <property name="Base file name" type="string">fsm</property>
+          <property name="Code items file name" type="string">fsmCI</property>
+          <property name="Generate code descriptions" type="bool">1</property>
+          <property name="Synchronize before generation" type="bool">1</property>
+        </object>
+        <object type="udHiddenProjectCategory">
+          <property name="id" type="long">2</property>
+          <property name="active_language" type="string">udCPPLanguage</property>
+          <property name="project_version" type="long">2</property>
+        </object>
+        <object type="udStateChartCategory">
+          <property name="id" type="long">3</property>
+          <property name="Invert conditions" type="bool">1</property>
+          <property name="Merge parallel transitions" type="bool">1</property>
+          <property name="Merge direct branches" type="bool">1</property>
+          <property name="Omit unused labels" type="bool">1</property>
+        </object>
+      </settings>
+    </object>
+  </project_properties>
+  <object type="udPackageItem">
+    <property name="id" type="long">2</property>
+    <property name="name" type="string">buzz</property>
+    <object type="udHStateChartDiagramItem">
+      <property name="id" type="long">3</property>
+      <property name="name" type="string">ledCycle</property>
+      <property name="description" type="string">LED cycle code</property>
+      <property name="diagram_type" type="string">State Chart</property>
+      <property name="generate_code" type="bool">1</property>
+      <property name="output_file" type="string">&lt;default&gt;</property>
+      <property name="active_generator" type="string">udHStateChartGenerator</property>
+      <property name="active_algorithm" type="string">udLoopCaseAlgorithm</property>
+      <property name="input_action" type="string">&lt;none&gt;</property>
+      <property name="non_blocking" type="bool">1</property>
+      <property name="inline" type="bool">0</property>
+      <diagram>
+        <object type="umlSimpleStateItem">
+          <property name="id" type="long">1</property>
+          <property name="relative_position" type="realpoint">161.000000,130.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udSimpleStateElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Off</property>
+              <property name="description" type="string">Diagram element's description...</property>
+            </object>
+          </property>
+          <property name="size" type="realpoint">102.000000,50.000000</property>
+          <property name="fill" type="brush">254,253,211,255 100</property>
+          <property name="title" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">2</property>
+              <property name="relative_position" type="realpoint">40.000000,5.000000</property>
+              <property name="size" type="realpoint">22.000000,18.000000</property>
+              <property name="text" type="string">Off</property>
+              <property name="label_type" type="int">1</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">3</property>
+          <property name="relative_position" type="realpoint">510.000000,300.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led1on</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led1on#9</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleActive</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleActive#13</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleTimeReset</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleTimeReset#16</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">1</property>
+          <property name="target" type="long">7</property>
+          <property name="dock_point" type="long">4294967296</property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">4</property>
+              <property name="relative_position" type="realpoint">-211.000000,1.000000</property>
+              <property name="size" type="realpoint">423.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; ledCycleActive() / [led1on(), ledCycleTimeReset()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">5</property>
+          <property name="relative_position" type="realpoint">510.000000,300.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led2off</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led2off#6</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleNotActive</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleNotActive#17</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">13</property>
+          <property name="target" type="long">1</property>
+          <property name="dock_point" type="long">55834574848</property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">6</property>
+              <property name="relative_position" type="realpoint">-166.000000,-9.000000</property>
+              <property name="size" type="realpoint">292.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; ledCycleNotActive() / [led2off()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlSimpleStateItem">
+          <property name="id" type="long">7</property>
+          <property name="relative_position" type="realpoint">761.000000,170.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udSimpleStateElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">led1</property>
+              <property name="description" type="string">Diagram element's description...</property>
+            </object>
+          </property>
+          <property name="size" type="realpoint">102.000000,50.000000</property>
+          <property name="fill" type="brush">254,253,211,255 100</property>
+          <property name="title" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">8</property>
+              <property name="relative_position" type="realpoint">36.000000,5.000000</property>
+              <property name="size" type="realpoint">31.000000,18.000000</property>
+              <property name="text" type="string">led1</property>
+              <property name="label_type" type="int">1</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">9</property>
+          <property name="relative_position" type="realpoint">510.000000,290.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleActive</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleActive#13</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleTimerIncr</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleTimerIncr#18</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">7</property>
+          <property name="target" type="long">7</property>
+          <property name="dock_point" type="long">30064771072</property>
+          <property name="control_points" type="listrealpoint">
+            <item>872.000000,230.000000</item>
+            <item>932.000000,200.000000</item>
+            <item>912.000000,180.000000</item>
+          </property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">10</property>
+              <property name="relative_position" type="realpoint">-171.000000,-9.000000</property>
+              <property name="size" type="realpoint">343.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; ledCycleActive() / [ledCycleTimerIncr()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">11</property>
+          <property name="relative_position" type="realpoint">510.000000,290.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleActive</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleActive#13</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleTimerIncr</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleTimerIncr#18</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">13</property>
+          <property name="target" type="long">13</property>
+          <property name="dock_point" type="long">55834574848</property>
+          <property name="control_points" type="listrealpoint">
+            <item>902.000000,400.000000</item>
+            <item>952.000000,360.000000</item>
+          </property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">12</property>
+              <property name="relative_position" type="realpoint">-161.000000,-19.000000</property>
+              <property name="size" type="realpoint">343.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; ledCycleActive() / [ledCycleTimerIncr()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlSimpleStateItem">
+          <property name="id" type="long">13</property>
+          <property name="relative_position" type="realpoint">751.000000,310.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udSimpleStateElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">led2</property>
+              <property name="description" type="string">Diagram element's description...</property>
+            </object>
+          </property>
+          <property name="size" type="realpoint">102.000000,50.000000</property>
+          <property name="fill" type="brush">254,253,211,255 100</property>
+          <property name="title" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">14</property>
+              <property name="relative_position" type="realpoint">36.000000,5.000000</property>
+              <property name="size" type="realpoint">31.000000,18.000000</property>
+              <property name="text" type="string">led2</property>
+              <property name="label_type" type="int">1</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlSimpleStateItem">
+          <property name="id" type="long">15</property>
+          <property name="relative_position" type="realpoint">131.000000,440.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udSimpleStateElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">led4</property>
+              <property name="description" type="string">Diagram element's description...</property>
+            </object>
+          </property>
+          <property name="size" type="realpoint">102.000000,50.000000</property>
+          <property name="fill" type="brush">254,253,211,255 100</property>
+          <property name="title" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">16</property>
+              <property name="relative_position" type="realpoint">36.000000,5.000000</property>
+              <property name="size" type="realpoint">31.000000,18.000000</property>
+              <property name="text" type="string">led4</property>
+              <property name="label_type" type="int">1</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">17</property>
+          <property name="relative_position" type="realpoint">500.000000,290.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleActive</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleActive#13</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleTimerIncr</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleTimerIncr#18</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">15</property>
+          <property name="target" type="long">15</property>
+          <property name="dock_point" type="long">64424509440</property>
+          <property name="control_points" type="listrealpoint">
+            <item>122.000000,540.000000</item>
+            <item>62.000000,490.000000</item>
+          </property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">18</property>
+              <property name="relative_position" type="realpoint">-122.000000,-9.000000</property>
+              <property name="size" type="realpoint">343.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; ledCycleActive() / [ledCycleTimerIncr()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">19</property>
+          <property name="relative_position" type="realpoint">510.000000,300.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led3off</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led3off#7</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleNotActive</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleNotActive#17</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">31</property>
+          <property name="target" type="long">1</property>
+          <property name="dock_point" type="long">133143986176</property>
+          <property name="control_points" type="listrealpoint">
+            <item>342.000000,390.000000</item>
+          </property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">20</property>
+              <property name="relative_position" type="realpoint">-25.000000,51.000000</property>
+              <property name="size" type="realpoint">292.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; ledCycleNotActive() / [led3off()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">21</property>
+          <property name="relative_position" type="realpoint">510.000000,300.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led1off</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led1off#4</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led2off</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led2off#6</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led3off</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led3off#7</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led4off</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led4off#8</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">23</property>
+          <property name="target" type="long">1</property>
+          <property name="dock_point" type="long">98784247808</property>
+          <property name="control_points" type="listrealpoint">
+            <item>190.000000,90.000000</item>
+          </property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">22</property>
+              <property name="relative_position" type="realpoint">-172.000000,11.000000</property>
+              <property name="size" type="realpoint">367.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt;  / [led1off(), led2off(), led3off(), led4off()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlInitialItem">
+          <property name="id" type="long">23</property>
+          <property name="relative_position" type="realpoint">132.000000,70.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udInitialElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Initial</property>
+              <property name="description" type="string">Diagram element's description...</property>
+            </object>
+          </property>
+          <property name="size" type="realpoint">20.000000,20.000000</property>
+          <property name="fill" type="brush">0,0,0,255 100</property>
+          <property name="title" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">24</property>
+              <property name="relative_position" type="realpoint">-40.000000,-15.000000</property>
+              <property name="size" type="realpoint">36.000000,18.000000</property>
+              <property name="text" type="string">Initial</property>
+              <property name="label_type" type="int">1</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">25</property>
+          <property name="relative_position" type="realpoint">510.000000,300.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleTimeExpired</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleTimeExpired#15</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led1off</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led1off#4</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led2on</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led2on#10</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleTimeReset</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleTimeReset#16</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">7</property>
+          <property name="target" type="long">13</property>
+          <property name="dock_point" type="long">30064771072</property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">26</property>
+              <property name="relative_position" type="realpoint">-82.000000,1.000000</property>
+              <property name="size" type="realpoint">542.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; ledCycleTimeExpired() / [led1off(), led2on(), ledCycleTimeReset()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">27</property>
+          <property name="relative_position" type="realpoint">510.000000,300.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led2off</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led2off#6</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led3on</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led3on#11</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleTimeExpired</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleTimeExpired#15</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleTimeReset</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleTimeReset#16</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">13</property>
+          <property name="target" type="long">31</property>
+          <property name="dock_point" type="long">55834574848</property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">28</property>
+              <property name="relative_position" type="realpoint">-162.000000,2281.000000</property>
+              <property name="size" type="realpoint">542.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; ledCycleTimeExpired() / [led2off(), led3on(), ledCycleTimeReset()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">29</property>
+          <property name="relative_position" type="realpoint">510.000000,300.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led3off</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led3off#7</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led4on</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led4on#12</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleTimeExpired</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleTimeExpired#15</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleTimeReset</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleTimeReset#16</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">31</property>
+          <property name="target" type="long">15</property>
+          <property name="dock_point" type="long">133143986176</property>
+          <property name="control_points" type="listrealpoint">
+            <item>442.000000,550.000000</item>
+          </property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">30</property>
+              <property name="relative_position" type="realpoint">-252.000000,-49.000000</property>
+              <property name="size" type="realpoint">542.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; ledCycleTimeExpired() / [led3off(), led4on(), ledCycleTimeReset()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlSimpleStateItem">
+          <property name="id" type="long">31</property>
+          <property name="relative_position" type="realpoint">761.000000,480.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udSimpleStateElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">led3</property>
+              <property name="description" type="string">Diagram element's description...</property>
+            </object>
+          </property>
+          <property name="size" type="realpoint">102.000000,50.000000</property>
+          <property name="fill" type="brush">254,253,211,255 100</property>
+          <property name="title" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">32</property>
+              <property name="relative_position" type="realpoint">36.000000,5.000000</property>
+              <property name="size" type="realpoint">31.000000,18.000000</property>
+              <property name="text" type="string">led3</property>
+              <property name="label_type" type="int">1</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">33</property>
+          <property name="relative_position" type="realpoint">510.000000,290.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleActive</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleActive#13</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleTimerIncr</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleTimerIncr#18</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">31</property>
+          <property name="target" type="long">31</property>
+          <property name="dock_point" type="long">133143986176</property>
+          <property name="control_points" type="listrealpoint">
+            <item>940.000000,560.000000</item>
+            <item>940.000000,500.000000</item>
+          </property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">34</property>
+              <property name="relative_position" type="realpoint">-241.000000,-19.000000</property>
+              <property name="size" type="realpoint">343.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; ledCycleActive() / [ledCycleTimerIncr()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">35</property>
+          <property name="relative_position" type="realpoint">510.000000,300.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led1off</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led1off#4</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleNotActive</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleNotActive#17</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">7</property>
+          <property name="target" type="long">1</property>
+          <property name="dock_point" type="long">30064771072</property>
+          <property name="control_points" type="listrealpoint">
+            <item>602.000000,110.000000</item>
+            <item>462.000000,110.000000</item>
+          </property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">36</property>
+              <property name="relative_position" type="realpoint">-62.000000,1.000000</property>
+              <property name="size" type="realpoint">292.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; ledCycleNotActive() / [led1off()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">37</property>
+          <property name="relative_position" type="realpoint">510.000000,300.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led4off</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led4off#8</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led1on</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led1on#9</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleTimeExpired</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleTimeExpired#15</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleTimeReset</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleTimeReset#16</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">cycleCountIncr</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::cycleCountIncr#4</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">15</property>
+          <property name="target" type="long">7</property>
+          <property name="dock_point" type="long">64424509440</property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">38</property>
+              <property name="relative_position" type="realpoint">-301.000000,1.000000</property>
+              <property name="size" type="realpoint">669.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; ledCycleTimeExpired() / [led4off(), led1on(), ledCycleTimeReset(), cycleCountIncr()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">39</property>
+          <property name="relative_position" type="realpoint">510.000000,300.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led4off</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led4off#8</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">ledCycleNotActive</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::ledCycleNotActive#17</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">15</property>
+          <property name="target" type="long">1</property>
+          <property name="dock_point" type="long">64424509440</property>
+          <property name="control_points" type="listrealpoint">
+            <item>152.000000,370.000000</item>
+          </property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">40</property>
+              <property name="relative_position" type="realpoint">-75.000000,-9.000000</property>
+              <property name="size" type="realpoint">292.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; ledCycleNotActive() / [led4off()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+      </diagram>
+    </object>
+    <object type="udHStateChartDiagramItem">
+      <property name="id" type="long">3</property>
+      <property name="name" type="string">dispatcher</property>
+      <property name="description" type="string">Diagram's description...</property>
+      <property name="diagram_type" type="string">State Chart</property>
+      <property name="generate_code" type="bool">1</property>
+      <property name="output_file" type="string">&lt;default&gt;</property>
+      <property name="active_generator" type="string">udHStateChartGenerator</property>
+      <property name="active_algorithm" type="string">udLoopCaseAlgorithm</property>
+      <property name="input_action" type="string">&lt;none&gt;</property>
+      <property name="non_blocking" type="bool">1</property>
+      <property name="inline" type="bool">0</property>
+      <diagram>
+        <object type="umlInitialItem">
+          <property name="id" type="long">1</property>
+          <property name="relative_position" type="realpoint">321.000000,10.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udInitialElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Initial</property>
+              <property name="description" type="string">Diagram element's description...</property>
+            </object>
+          </property>
+          <property name="size" type="realpoint">20.000000,20.000000</property>
+          <property name="fill" type="brush">0,0,0,255 100</property>
+          <property name="title" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">2</property>
+              <property name="relative_position" type="realpoint">0.000000,25.000000</property>
+              <property name="size" type="realpoint">36.000000,18.000000</property>
+              <property name="text" type="string">Initial</property>
+              <property name="label_type" type="int">1</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlSimpleStateItem">
+          <property name="id" type="long">7</property>
+          <property name="relative_position" type="realpoint">390.000000,130.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udSimpleStateElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Normal</property>
+              <property name="description" type="string">Diagram element's description...</property>
+            </object>
+          </property>
+          <property name="size" type="realpoint">102.000000,50.000000</property>
+          <property name="fill" type="brush">254,253,211,255 100</property>
+          <property name="title" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">8</property>
+              <property name="relative_position" type="realpoint">25.000000,5.000000</property>
+              <property name="size" type="realpoint">53.000000,18.000000</property>
+              <property name="text" type="string">Normal</property>
+              <property name="label_type" type="int">1</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlSimpleStateItem">
+          <property name="id" type="long">5</property>
+          <property name="relative_position" type="realpoint">773.000000,140.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udSimpleStateElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Rápido</property>
+              <property name="description" type="string">Diagram element's description...</property>
+            </object>
+          </property>
+          <property name="size" type="realpoint">117.000000,50.000000</property>
+          <property name="fill" type="brush">254,253,211,255 100</property>
+          <property name="title" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">6</property>
+              <property name="relative_position" type="realpoint">34.000000,5.000000</property>
+              <property name="size" type="realpoint">49.000000,18.000000</property>
+              <property name="text" type="string">Rápido</property>
+              <property name="label_type" type="int">1</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">9</property>
+          <property name="relative_position" type="realpoint">510.000000,170.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">setCycleNormal</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::setCycleNormal#7</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">1</property>
+          <property name="target" type="long">7</property>
+          <property name="dock_point" type="long">4294967296</property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">10</property>
+              <property name="relative_position" type="realpoint">-126.000000,-19.000000</property>
+              <property name="size" type="realpoint">215.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt;  / [setCycleNormal()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">3</property>
+          <property name="relative_position" type="realpoint">510.000000,170.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">cycleCountExpired</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::cycleCountExpired#6</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">setCycleFast</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::setCycleFast#8</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">resetVueltasCounter</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::resetVueltasCounter#30</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">7</property>
+          <property name="target" type="long">5</property>
+          <property name="dock_point" type="long">30064771072</property>
+          <property name="control_points" type="listrealpoint">
+            <item>631.000000,110.000000</item>
+          </property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">4</property>
+              <property name="relative_position" type="realpoint">-137.000000,1.000000</property>
+              <property name="size" type="realpoint">510.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; cycleCountExpired() / [setCycleFast(), resetVueltasCounter()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">13</property>
+          <property name="relative_position" type="realpoint">510.000000,170.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">cycleCountExpired</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::cycleCountExpired#6</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led4off</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led4off#8</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led1off</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led1off#4</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">setCycleVuelta</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::setCycleVuelta#26</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">5</property>
+          <property name="target" type="long">11</property>
+          <property name="target_offset" type="realpoint">0.598039,0.600000</property>
+          <property name="dock_point" type="long">21474836480</property>
+          <property name="control_points" type="listrealpoint">
+            <item>971.000000,230.000000</item>
+          </property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">14</property>
+              <property name="relative_position" type="realpoint">-110.000000,-9.000000</property>
+              <property name="size" type="realpoint">497.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; cycleCountExpired() / [led4off(), led1off(), setCycleVuelta()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">15</property>
+          <property name="relative_position" type="realpoint">510.000000,170.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">cycleCountExpired</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::cycleCountExpired#6</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led1off</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led1off#4</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led4off</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led4off#8</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">setCycleIda</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::setCycleIda#27</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">incrContadorVueltas</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::incrContadorVueltas#31</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">11</property>
+          <property name="target" type="long">5</property>
+          <property name="dock_point" type="long">47244640256</property>
+          <property name="control_points" type="listrealpoint">
+            <item>661.000000,260.000000</item>
+          </property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">16</property>
+              <property name="relative_position" type="realpoint">-154.000000,1.000000</property>
+              <property name="size" type="realpoint">641.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; cycleCountExpired() / [led1off(), led4off(), setCycleIda(), incrContadorVueltas()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlSimpleStateItem">
+          <property name="id" type="long">11</property>
+          <property name="relative_position" type="realpoint">850.000000,280.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udSimpleStateElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Vuelta</property>
+              <property name="description" type="string">Diagram element's description...</property>
+            </object>
+          </property>
+          <property name="size" type="realpoint">102.000000,50.000000</property>
+          <property name="fill" type="brush">254,253,211,255 100</property>
+          <property name="title" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">12</property>
+              <property name="relative_position" type="realpoint">29.000000,5.000000</property>
+              <property name="size" type="realpoint">45.000000,18.000000</property>
+              <property name="text" type="string">Vuelta</property>
+              <property name="label_type" type="int">1</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlSimpleStateItem">
+          <property name="id" type="long">19</property>
+          <property name="relative_position" type="realpoint">166.000000,140.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udSimpleStateElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Esperar</property>
+              <property name="description" type="string">Diagram element's description...</property>
+            </object>
+          </property>
+          <property name="size" type="realpoint">102.000000,50.000000</property>
+          <property name="fill" type="brush">254,253,211,255 100</property>
+          <property name="title" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">20</property>
+              <property name="relative_position" type="realpoint">23.000000,5.000000</property>
+              <property name="size" type="realpoint">56.000000,18.000000</property>
+              <property name="text" type="string">Esperar</property>
+              <property name="label_type" type="int">1</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">21</property>
+          <property name="relative_position" type="realpoint">510.000000,170.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">waitTimeNotExpired</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::waitTimeNotExpired#33</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">incrWaitTime</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::incrWaitTime#34</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">19</property>
+          <property name="target" type="long">19</property>
+          <property name="dock_point" type="long">81604378624</property>
+          <property name="control_points" type="listrealpoint">
+            <item>177.000000,240.000000</item>
+            <item>127.000000,220.000000</item>
+          </property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">22</property>
+              <property name="relative_position" type="realpoint">-177.000000,-9.000000</property>
+              <property name="size" type="realpoint">355.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; waitTimeNotExpired() / [incrWaitTime()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">17</property>
+          <property name="relative_position" type="realpoint">510.000000,170.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">contVueltasExpired</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::contVueltasExpired#32</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">resetWaitTimer</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::resetWaitTimer#36</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">stopLedCycle</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::stopLedCycle#37</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">5</property>
+          <property name="target" type="long">19</property>
+          <property name="source_offset" type="realpoint">0.162393,0.400000</property>
+          <property name="target_offset" type="realpoint">0.696078,0.400000</property>
+          <property name="dock_point" type="long">21474836480</property>
+          <property name="control_points" type="listrealpoint">
+            <item>521.000000,220.000000</item>
+          </property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">18</property>
+              <property name="relative_position" type="realpoint">-241.000000,-9.000000</property>
+              <property name="size" type="realpoint">483.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; contVueltasExpired() / [resetWaitTimer(), stopLedCycle()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+        <object type="umlTransitionItem">
+          <property name="id" type="long">23</property>
+          <property name="relative_position" type="realpoint">510.000000,170.000000</property>
+          <property name="halign" type="long">-12884901888</property>
+          <property name="user_data" type="serializabledynamic">
+            <object type="udTransElementItem">
+              <property name="id" type="long">0</property>
+              <property name="name" type="string">Transition connection</property>
+              <property name="description" type="string">Transition's description...</property>
+              <object type="udConditionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">waitTimeExpired</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::waitTimeExpired#35</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">led1on</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::led1on#9</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">setCycleNormal</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::setCycleNormal#7</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+              <object type="udActionLinkItem">
+                <property name="id" type="long">-1</property>
+                <property name="name" type="string">resetVueltasCounter</property>
+                <property name="description" type="string">Link description...</property>
+                <property name="original_code" type="string">&lt;global&gt;::resetVueltasCounter#30</property>
+                <property name="scope" type="string">&lt;global&gt;</property>
+              </object>
+            </object>
+          </property>
+          <property name="source" type="long">19</property>
+          <property name="target" type="long">7</property>
+          <property name="dock_point" type="long">81604378624</property>
+          <property name="control_points" type="listrealpoint">
+            <item>70.000000,100.000000</item>
+          </property>
+          <property name="label" type="serializabledynamicnocreate">
+            <object type="uddLabelElement">
+              <property name="id" type="long">24</property>
+              <property name="relative_position" type="realpoint">-42.000000,-9.000000</property>
+              <property name="size" type="realpoint">591.000000,18.000000</property>
+              <property name="text" type="string">&lt;&lt; waitTimeExpired() / [led1on(), setCycleNormal(), resetVueltasCounter()] &gt;&gt;</property>
+              <property name="label_type" type="int">3</property>
+            </object>
+          </property>
+        </object>
+      </diagram>
+    </object>
+  </object>
+  <object type="udCodePackageItem">
+    <property name="id" type="long">5</property>
+    <property name="name" type="string">Action functions</property>
+    <object type="udActionItem">
+      <property name="id" type="long">4</property>
+      <property name="name" type="string">led1off</property>
+      <property name="description" type="string">led1 off</property>
+      <property name="code" type="string">dre.leds[0]=false;</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::led1off#4</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">6</property>
+      <property name="name" type="string">led2off</property>
+      <property name="description" type="string">led 2 off</property>
+      <property name="code" type="string">dre.leds[1]=false;</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::led2off#6</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">7</property>
+      <property name="name" type="string">led3off</property>
+      <property name="description" type="string">led3 off</property>
+      <property name="code" type="string">dre.leds[2]=false;</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::led3off#7</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">8</property>
+      <property name="name" type="string">led4off</property>
+      <property name="description" type="string">led4 off</property>
+      <property name="code" type="string">dre.leds[3]=false;</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::led4off#8</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">9</property>
+      <property name="name" type="string">led1on</property>
+      <property name="description" type="string">led1on</property>
+      <property name="code" type="string">dre.leds[0]=true;</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::led1on#9</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">10</property>
+      <property name="name" type="string">led2on</property>
+      <property name="description" type="string">led2 on</property>
+      <property name="code" type="string">dre.leds[1]=true;</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::led2on#10</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">11</property>
+      <property name="name" type="string">led3on</property>
+      <property name="description" type="string">led3on</property>
+      <property name="code" type="string">dre.leds[2]=true;</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::led3on#11</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">12</property>
+      <property name="name" type="string">led4on</property>
+      <property name="description" type="string">led4 on </property>
+      <property name="code" type="string">dre.leds[3]=true;</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::led4on#12</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">16</property>
+      <property name="name" type="string">ledCycleTimeReset</property>
+      <property name="description" type="string">Resets the timer for active status of the leds.</property>
+      <property name="code" type="string">dre.ledCycleTime=dre.ledCyclePeriod;</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::ledCycleTimeReset#16</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">18</property>
+      <property name="name" type="string">ledCycleTimerIncr</property>
+      <property name="description" type="string">Increments the timer of the life time cycle</property>
+      <property name="code" type="string">dre.ledCycleTime--;
+/*
+Serial.print("cycle ");
+Serial.print(dre.ledCycleTime);
+Serial.print(" period ");
+Serial.println(dre.ledCyclePeriod);
+*/</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::ledCycleTimerIncr#18</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">4</property>
+      <property name="name" type="string">cycleCountIncr</property>
+      <property name="description" type="string">Incrementa el número de ciclos ejecutados</property>
+      <property name="code" type="string">dre.cycleCount++;
+Serial.print("ciclos: ");
+Serial.println(dre.cycleCount);</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::cycleCountIncr#4</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">7</property>
+      <property name="name" type="string">setCycleNormal</property>
+      <property name="description" type="string">Sets cycle configuration for normal cycle</property>
+      <property name="code" type="string">dre.ledCycle=true;
+
+/* Numero de ciclos a hacer */
+dre.cycleCountLimit=CFG_CYCLECOUNT_LIMIT_NORMAL;  
+dre.cycleCount=0;
+
+/* Periodo de cada led */
+dre.ledCyclePeriod=(CFG_LEDCYCLEPERIOD_MS/(CYCLE_TIME_IN_MICROS/1000));
+dre.ledCycleTime=dre.ledCyclePeriod;
+
+/* Orden de los leds */
+dre.ledAssign[0]=CFG_LED1_PIN;
+dre.ledAssign[1]=CFG_LED2_PIN;
+dre.ledAssign[2]=CFG_LED3_PIN;
+dre.ledAssign[3]=CFG_LED4_PIN;</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::setCycleNormal#7</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">8</property>
+      <property name="name" type="string">setCycleFast</property>
+      <property name="description" type="string">Sets the cycle configuration to fast one.</property>
+      <property name="code" type="string">dre.ledCycle=true;
+
+/* Numero de ciclos a hacer */
+dre.cycleCountLimit=CFG_CYCLECOUNT_LIMIT_FAST;  
+dre.cycleCount=0;
+
+/* Periodo de cada led */
+dre.ledCyclePeriod=(CFG_LEDCYCLEFASTPERIOD_MS/(CYCLE_TIME_IN_MICROS/1000));
+dre.ledCycleTime=dre.ledCyclePeriod;
+
+/* Orden de los leds */
+dre.ledAssign[0]=CFG_LED1_PIN;
+dre.ledAssign[1]=CFG_LED2_PIN;
+dre.ledAssign[2]=CFG_LED3_PIN;
+dre.ledAssign[3]=CFG_LED4_PIN;</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::setCycleFast#8</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">26</property>
+      <property name="name" type="string">setCycleVuelta</property>
+      <property name="description" type="string">Action's description...</property>
+      <property name="code" type="string">dre.ledCycle=true;
+
+/* Numero de ciclos a hacer */
+dre.cycleCountLimit=1;
+dre.cycleCount=0;
+
+/* Periodo de cada led */
+dre.ledCyclePeriod=(CFG_LEDCYCLEFASTPERIOD_MS/(CYCLE_TIME_IN_MICROS/1000));
+dre.ledCycleTime=dre.ledCyclePeriod;
+
+/* Orden de los leds */
+dre.ledAssign[0]=CFG_LED4_PIN;
+dre.ledAssign[1]=CFG_LED3_PIN;
+dre.ledAssign[2]=CFG_LED2_PIN;
+dre.ledAssign[3]=CFG_LED1_PIN;</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::setCycleVuelta#26</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">27</property>
+      <property name="name" type="string">setCycleIda</property>
+      <property name="description" type="string">Un sólo ciclo en sentido correcto</property>
+      <property name="code" type="string">dre.ledCycle=true;
+
+/* Numero de ciclos a hacer */
+dre.cycleCountLimit=1;
+dre.cycleCount=0;
+
+/* Periodo de cada led */
+dre.ledCyclePeriod=(CFG_LEDCYCLEFASTPERIOD_MS/(CYCLE_TIME_IN_MICROS/1000));
+dre.ledCycleTime=dre.ledCyclePeriod;
+
+/* Orden de los leds */
+dre.ledAssign[0]=CFG_LED1_PIN;
+dre.ledAssign[1]=CFG_LED2_PIN;
+dre.ledAssign[2]=CFG_LED3_PIN;
+dre.ledAssign[3]=CFG_LED4_PIN;</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::setCycleIda#27</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">30</property>
+      <property name="name" type="string">resetVueltasCounter</property>
+      <property name="description" type="string">Resetea el contador de idas y vueltas</property>
+      <property name="code" type="string">dre.contVueltas=0;
+Serial.println("Reset cuentas");</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::resetVueltasCounter#30</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">31</property>
+      <property name="name" type="string">incrContadorVueltas</property>
+      <property name="description" type="string">Incrementa el contador de vueltas</property>
+      <property name="code" type="string">dre.contVueltas++;
+Serial.print("vueltas: ");
+Serial.println(dre.contVueltas);</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::incrContadorVueltas#31</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">34</property>
+      <property name="name" type="string">incrWaitTime</property>
+      <property name="description" type="string">Action's description...</property>
+      <property name="code" type="string">dre.waitTime++;</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::incrWaitTime#34</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">36</property>
+      <property name="name" type="string">resetWaitTimer</property>
+      <property name="description" type="string">Action's description...</property>
+      <property name="code" type="string">dre.waitTime=0;
+dre.waitTimeLimit=(CFG_WAIT_TIME_MS/(CYCLE_TIME_IN_MICROS/1000));</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::resetWaitTimer#36</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udActionItem">
+      <property name="id" type="long">37</property>
+      <property name="name" type="string">stopLedCycle</property>
+      <property name="description" type="string">Action's description...</property>
+      <property name="code" type="string">dre.ledCycle=false;</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::stopLedCycle#37</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">10</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+  </object>
+  <object type="udCodePackageItem">
+    <property name="id" type="long">14</property>
+    <property name="name" type="string">Condition functions</property>
+    <object type="udConditionItem">
+      <property name="id" type="long">13</property>
+      <property name="name" type="string">ledCycleActive</property>
+      <property name="description" type="string">led cycle is active</property>
+      <property name="code" type="string">(dre.ledCycle==true &amp;&amp; dre.ledCycleTime&gt;0)</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::ledCycleActive#13</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">1</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udConditionItem">
+      <property name="id" type="long">15</property>
+      <property name="name" type="string">ledCycleTimeExpired</property>
+      <property name="description" type="string">the time for a led to be active in the cycle has expired.</property>
+      <property name="code" type="string">(dre.ledCycleTime&lt;=0 &amp;&amp; dre.ledCycle==true)</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::ledCycleTimeExpired#15</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">1</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udConditionItem">
+      <property name="id" type="long">17</property>
+      <property name="name" type="string">ledCycleNotActive</property>
+      <property name="description" type="string">The led cycle is not active</property>
+      <property name="code" type="string">dre.ledCycle==false</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::ledCycleNotActive#17</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">1</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udConditionItem">
+      <property name="id" type="long">6</property>
+      <property name="name" type="string">cycleCountExpired</property>
+      <property name="description" type="string">The number of programmed cycles has expired</property>
+      <property name="code" type="string">((dre.cycleCount&gt;=dre.cycleCountLimit) &amp;&amp; (dre.contVueltas&lt;CFG_CONTVUELTAS_LIMIT))</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::cycleCountExpired#6</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">1</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udConditionItem">
+      <property name="id" type="long">32</property>
+      <property name="name" type="string">contVueltasExpired</property>
+      <property name="description" type="string">Hemos acabado de dar vueltas.</property>
+      <property name="code" type="string">dre.contVueltas&gt;=CFG_CONTVUELTAS_LIMIT</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::contVueltasExpired#32</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">1</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udConditionItem">
+      <property name="id" type="long">33</property>
+      <property name="name" type="string">waitTimeNotExpired</property>
+      <property name="description" type="string">Condition's description...</property>
+      <property name="code" type="string">(dre.waitTime&lt;dre.waitTimeLimit)</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::waitTimeNotExpired#33</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">1</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+    <object type="udConditionItem">
+      <property name="id" type="long">35</property>
+      <property name="name" type="string">waitTimeExpired</property>
+      <property name="description" type="string">Condition's description...</property>
+      <property name="code" type="string">(dre.waitTime&gt;=dre.waitTimeLimit)</property>
+      <property name="scope" type="string">&lt;global&gt;</property>
+      <property name="signature" type="string">&lt;global&gt;::waitTimeExpired#35</property>
+      <property name="inline" type="bool">1</property>
+      <property name="retval_data_type" type="int">1</property>
+      <property name="retval_value_type" type="int">0</property>
+      <property name="retval_data_modifier" type="int">0</property>
+      <property name="user_retval_decl_place" type="int">0</property>
+      <property name="function_modifier" type="int">0</property>
+    </object>
+  </object>
+</project>
